@@ -131,27 +131,23 @@
       justify-content: center;
       overflow: hidden;
       min-height: 730px;
+      background-image: url('assets/fundo-inicio.svg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
-
-    /* Pattern background — covers the full section */
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      pointer-events: none;
-      z-index: 0;
-    }
-
 
     .hero-content {
       position: relative;
       z-index: 1;
       text-align: center;
-      padding: 40px 20px;
-      max-width: 580px;
+      padding: 50px 100px;
+      padding-top: 150px;
+      min-width: 800px;
+      background-image: url('assets/Polygon 1.svg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
     }
 
     /* "Sinta orgulho de apresentar seu negócio" — weight 400, italic */
@@ -161,7 +157,7 @@
       font-style: italic;
       font-size: 68px;
       letter-spacing: 0;
-      line-height: 1.05;
+      line-height: 0.9;
       color: var(--text);
       margin-bottom: 20px;
     }
@@ -171,11 +167,12 @@
       font-family: 'SUSE', sans-serif;
       font-weight: 300;
       font-style: italic;
+      margin-top: 16px;
       font-size: 13px;
       letter-spacing: 0;
-      line-height: 1.5;
+      line-height: 1.2;
       color: var(--text);
-      margin-bottom: 36px;
+      margin-bottom: 16px;
     }
 
     /* Button using Polygon 2 SVG (blue hexagon, 402×61) */
@@ -628,6 +625,8 @@
 
       .navbar-inner  { padding: 12px 24px; }
 
+      #inicio          { min-height: 500px; }
+      .hero-content    { background-image: none; background-color: white; border-radius: 8px; padding: 30px; width: 100%; }
       .hero-content h1 { font-size: 40px; }
       .btn-orcamento   { width: 90vw; height: auto; min-height: 54px; }
 
@@ -638,11 +637,15 @@
       .sobre-photo-col { width: 100%; justify-content: center; }
       .mel-photo       { max-width: 320px; }
 
-      .story-inner     { flex-direction: column; padding: 60px 24px 80px; gap: 40px; align-items: center; }
-      .story-visual    { width: 100%; max-width: 380px; }
+      .story           { padding: 40px 0 50px; }
+      .story-inner     { flex-direction: column; padding: 0 24px; gap: 28px; align-items: center; }
+      .story-visual    { width: 100%; max-width: 320px; }
 
+      #projetos        { padding: 50px 0 60px; }
       #projetos .page-wrap { padding: 0 24px; }
-      #projetos h2     { font-size: 26px; }
+      #projetos h2     { font-size: 26px; margin-bottom: 28px; }
+      .projetos-grid   { grid-template-columns: 1fr; }
+      .proj-item       { aspect-ratio: 16/9; }
 
       .servico, .servico.flip { flex-direction: column; gap: 40px; padding: 0 24px; }
       .s-icon          { width: 100%; }
@@ -698,9 +701,6 @@
      HERO
 ================================================================ -->
 <section id="inicio" aria-labelledby="hero-h1" tabindex="-1">
-  <!-- Fundo pattern exportado do Figma -->
-  <img src="assets/pattern fundo.svg" class="hero-bg" alt="" aria-hidden="true">
-
   <div class="hero-content">
     <h1 id="hero-h1">Sinta orgulho<br>de apresentar<br>seu negócio</h1>
     <p class="hero-sub">COM UMA IDENTIDADE<br>VISUAL INESQUECÍVEL</p>
@@ -848,7 +848,7 @@
       <a href="mailto:melissasscambraia@gmail.com">E-MAIL</a>
       <a href="https://www.pinterest.com/melissacambraia_design/?invite_code=52d793ed05bf4d07b4bb95720b5e4964&sender=725572327374419354"
          target="_blank" rel="noopener noreferrer">PINTEREST</a>
-      <a href="https://www.tiktok.com/@mel_cambraia?_r=1&_t=ZS-95JVodYKX80"
+      <a href="https://www.tiktok.com/@melissa_cambraia?_r=1&_t=ZS-95NJYmlSQ6f"
          target="_blank" rel="noopener noreferrer">TIKTOK</a>
     </nav>
   </div>
