@@ -24,7 +24,7 @@
     }
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html  { scroll-behavior: smooth; }
+    html  { scroll-behavior: smooth; overflow-x: hidden; }
 
     body {
       font-family: 'SUSE', sans-serif;
@@ -32,6 +32,7 @@
       letter-spacing: 0;
       background: var(--white);
       color: var(--text);
+      overflow-x: hidden;
     }
 
     a    { text-decoration: none; color: inherit; }
@@ -130,6 +131,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      width: 100%;
       min-height: 730px;
       background-image: url('assets/fundo-inicio.svg');
       background-size: cover;
@@ -639,8 +641,8 @@
 
       .navbar-inner  { padding: 12px 24px; }
 
-      #inicio          { min-height: 500px; }
-      .hero-content    { background-image: none; background-color: white; border-radius: 8px; padding: 30px; width: 100%; }
+      #inicio          { min-height: 500px; overflow: hidden; }
+      .hero-content    { background-image: none; background-color: white; border-radius: 8px; padding: 30px; width: 100%; min-width: 0; }
       .hero-content h1 { font-size: 40px; }
       .hero-sub        { font-size: 14px; }
       .btn-orcamento   { width: 90vw; height: auto; min-height: 54px; }
