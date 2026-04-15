@@ -168,7 +168,7 @@
       font-weight: 300;
       font-style: italic;
       margin-top: 20px;
-      font-size: 16px;
+      font-size: 20px;
       letter-spacing: 0;
       line-height: 1.2;
       color: var(--text);
@@ -536,6 +536,20 @@
     }
 
     /* ============================================================
+       SCROLL ANIMATIONS
+    ============================================================ */
+    .sc-hidden {
+      opacity: 0 !important;
+    }
+    .sc-up    { transform: translateY(52px) !important; }
+    .sc-left  { transform: translateX(-64px) !important; }
+    .sc-right { transform: translateX(64px) !important; }
+
+    .sc-transition {
+      transition: opacity 0.75s ease-out, transform 0.75s ease-out !important;
+    }
+
+    /* ============================================================
        RESPONSIVE
     ============================================================ */
     @media (max-width: 1024px) {
@@ -628,6 +642,7 @@
       #inicio          { min-height: 500px; }
       .hero-content    { background-image: none; background-color: white; border-radius: 8px; padding: 30px; width: 100%; }
       .hero-content h1 { font-size: 40px; }
+      .hero-sub        { font-size: 14px; }
       .btn-orcamento   { width: 90vw; height: auto; min-height: 54px; }
 
       #sobre           { padding: 60px 0; }
@@ -702,11 +717,11 @@
 ================================================================ -->
 <section id="inicio" aria-labelledby="hero-h1" tabindex="-1">
   <div class="hero-content">
-    <h1 id="hero-h1">Sinta orgulho<br>de apresentar<br>seu negócio</h1>
-    <p class="hero-sub">COM UMA IDENTIDADE<br>VISUAL INESQUECÍVEL</p>
+    <h1 id="hero-h1" data-anim="fade-up" data-delay="0">Sinta orgulho<br>de apresentar<br>seu negócio</h1>
+    <p class="hero-sub" data-anim="fade-up" data-delay="150">COM UMA IDENTIDADE<br>VISUAL INESQUECÍVEL</p>
     <a
       href="https://docs.google.com/forms/d/e/1FAIpQLSfVbRnVu03Zj8zDxSvvuKPfptxGNki14O8SEoGW36YqmbcvsQ/viewform?fbclid=PAVERFWAQ87AhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeX9wo77Lm0ZnGDCW3-jScio3d4KF7JziczrS3dTeYH4GjBg13vq5dpqSVk1g_aem_9_WELY5Hedy64_b4dh3GGw"
-      class="btn-orcamento"
+      class="btn-orcamento" data-anim="fade-up" data-delay="300"
       target="_blank"
       rel="noopener noreferrer">QUERO UM ORÇAMENTO</a>
   </div>
@@ -718,14 +733,14 @@
 <section id="sobre" aria-labelledby="sobre-h2">
   <div class="sobre-inner page-wrap">
 
-    <div class="sobre-text-col">
+    <div class="sobre-text-col" data-anim="fade-left">
       <h2 id="sobre-h2">Olá, prazer!</h2>
       <p>Eu sou a Melissa, ou Mel, como você preferir. Sou graduada em Design Gráfico e eu amo criar Identidades Visuais sem seguir tendências, sempre explorando possibilidades diferentes.</p>
       <p>Meu propósito é ajudar aquele empreendedor (a) ou empresa, que olha para a sua marca e sente que ela merece mais. Que não quer nada óbvio ou comum demais. Que entende que seu negócio tem uma história única e merece uma Identidade Visual à altura.</p>
     </div>
 
     <!-- Foto + ícones já compostos em um único SVG -->
-    <div class="sobre-photo-col">
+    <div class="sobre-photo-col" data-anim="fade-right">
       <img
         src="assets/imagem e icones.svg"
         class="mel-photo"
@@ -744,11 +759,11 @@
     <!-- Composição do Figma: foto em hexágono + hexágono dourado com abelha -->
     <img
       src="assets/sobre-parte2.svg"
-      class="story-visual"
+      class="story-visual" data-anim="fade-left"
       alt="Melissa Cambraia em moldura hexagonal"
       loading="lazy">
 
-    <div class="story-body">
+    <div class="story-body" data-anim="fade-right">
       <p class="quote">Melissa tem origem grega<br>e significa: "abelha", "mel".</p>
       <p>A abelha cria, trabalha com dedicação, segue um processo meticuloso e produz algo doce e valioso. Eu faço o mesmo com as Identidades Visuais.</p>
     </div>
@@ -760,34 +775,34 @@
 ================================================================ -->
 <section id="projetos" aria-labelledby="projetos-h2">
   <div class="page-wrap">
-    <h2 id="projetos-h2">Projetos feitos aqui</h2>
+    <h2 id="projetos-h2" data-anim="fade-up">Projetos feitos aqui</h2>
 
     <div class="projetos-grid">
-      <div class="proj-item">
+      <div class="proj-item" data-anim="fade-up" data-delay="0">
         <img src="assets/projeto-melissa.svg"   alt="Projeto Melissa Cambraia — branding" loading="lazy">
       </div>
-      <div class="proj-item">
+      <div class="proj-item" data-anim="fade-up" data-delay="80">
         <img src="assets/projeto-cdm.svg"       alt="Projeto CDM — camisetas" loading="lazy">
       </div>
-      <div class="proj-item">
+      <div class="proj-item" data-anim="fade-up" data-delay="160">
         <img src="assets/projeto-deFelix.svg"   alt="Projeto de Felix — ecobag" loading="lazy">
       </div>
-      <div class="proj-item">
+      <div class="proj-item" data-anim="fade-up" data-delay="240">
         <img src="assets/projeto-mari.svg"      alt="Projeto Mari — sacola" loading="lazy">
       </div>
-      <div class="proj-item">
+      <div class="proj-item" data-anim="fade-up" data-delay="320">
         <img src="assets/projeto-jm.svg"        alt="Projeto JM — identidade visual" loading="lazy">
       </div>
-      <div class="proj-item">
+      <div class="proj-item" data-anim="fade-up" data-delay="400">
         <img src="assets/projeto-trem-bom.svg"  alt="Projeto O Trem Bom" loading="lazy">
       </div>
-      <div class="proj-item">
+      <div class="proj-item" data-anim="fade-up" data-delay="480">
         <img src="assets/projeto-lr.svg"        alt="Projeto LR — mockup" loading="lazy">
       </div>
-      <div class="proj-item">
+      <div class="proj-item" data-anim="fade-up" data-delay="560">
         <img src="assets/projeto-altersol.svg"  alt="Projeto Altersol — banners" loading="lazy">
       </div>
-      <div class="proj-item">
+      <div class="proj-item" data-anim="fade-up" data-delay="640">
         <img src="assets/projeto-mb.svg"        alt="Projeto MB Beauty" loading="lazy">
       </div>
     </div>
@@ -799,28 +814,28 @@
 ================================================================ -->
 <section id="servicos" aria-labelledby="servicos-h2">
   <div class="page-wrap">
-    <h2 id="servicos-h2">Meus Serviços</h2>
+    <h2 id="servicos-h2" data-anim="fade-up">Meus Serviços</h2>
 
     <!-- Identidade Visual -->
     <div class="servico">
-      <div class="s-text">
+      <div class="s-text" data-anim="fade-left">
         <h3>Identidade Visual</h3>
         <p>A Identidade Visual é mais do que apenas um logotipo. É um conjunto de elementos visuais criados com o objetivo de tangibilizar os valores e atributos de uma marca, facilitando o reconhecimento e aumentando a percepção de valor.</p>
         <p>Ela inclui estudo de marca, conceito, criação do logotipo, tipografia, paleta de cores, elementos gráficos auxiliares e todas as aplicações necessárias. É um ótimo investimento para seu negócio, que pode ficar gravado na mente das pessoas por vários anos, como as grandes marcas!</p>
       </div>
-      <div class="s-icon" aria-hidden="true">
+      <div class="s-icon" aria-hidden="true" data-anim="fade-right">
         <img src="assets/icone-colmeia-identidadeVisual.svg" alt="">
       </div>
     </div>
 
     <!-- Landing Page -->
     <div class="servico flip">
-      <div class="s-text">
+      <div class="s-text" data-anim="fade-right">
         <h3>Landing Page</h3>
         <p>A Landing Page é uma página web estratégica criada para apresentar sua oferta de forma clara e direcionar o visitante para uma ação (comprar, entrar em contato, etc). Esta página que você está navegando é um exemplo!</p>
         <p class="highlight">Este serviço é exclusivo para quem já possui Identidade Visual desenvolvida comigo, garantindo mais consistência e impacto no resultado final.</p>
       </div>
-      <div class="s-icon" aria-hidden="true">
+      <div class="s-icon" aria-hidden="true" data-anim="fade-left">
         <img src="assets/icone-notebook-lanfingPage.svg" alt="">
       </div>
     </div>
@@ -832,15 +847,15 @@
 ================================================================ -->
 <section id="contato" aria-labelledby="cta-h2">
   <div class="page-wrap">
-    <h2 id="cta-h2">Vamos criar algo<br>surpreendente juntos!</h2>
+    <h2 id="cta-h2" data-anim="fade-up" data-delay="0">Vamos criar algo<br>surpreendente juntos!</h2>
 
     <a
       href="https://www.contate.me/ios/melissadesignermarcas?fbclid=PAVERFWARAlgdleHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeC_H6C2DG1oG0udYNd85bOjA-vFxadMtmSuWFXOXg8Tmh8i0A7erC1WDbSVw_aem_KDhvoSSuge6n9Wb9Wi8WpA"
-      class="btn-fale"
+      class="btn-fale" data-anim="fade-up" data-delay="150"
       target="_blank"
       rel="noopener noreferrer">FALE COMIGO</a>
 
-    <nav class="social-row" aria-label="Redes sociais de Melissa Cambraia">
+    <nav class="social-row" aria-label="Redes sociais de Melissa Cambraia" data-anim="fade-up" data-delay="300">
       <a href="https://www.contate.me/ios/melissadesignermarcas?fbclid=PAVERFWARAlgdleHRuA2FlbQIxMABzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeC_H6C2DG1oG0udYNd85bOjA-vFxadMtmSuWFXOXg8Tmh8i0A7erC1WDbSVw_aem_KDhvoSSuge6n9Wb9Wi8WpA"
          target="_blank" rel="noopener noreferrer">WHATSAPP</a>
       <a href="https://www.instagram.com/melissacambraia_design?igsh=NHVkdGR1MHpxM3d4"
@@ -907,6 +922,40 @@
         }
       }
     });
+
+    /* ── Scroll animations ── */
+    var animMap = {
+      'fade-up':    'sc-up',
+      'fade-left':  'sc-left',
+      'fade-right': 'sc-right'
+    };
+
+    var animEls = document.querySelectorAll('[data-anim]');
+
+    // aplica estado inicial escondido + transição em todos os elementos
+    animEls.forEach(function (el) {
+      var dir = el.getAttribute('data-anim');
+      var delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+      el.classList.add('sc-transition', 'sc-hidden', animMap[dir] || 'sc-up');
+      el._animDelay = delay;
+    });
+
+    var scrollObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var el = entry.target;
+        var dirClass = animMap[el.getAttribute('data-anim')] || 'sc-up';
+
+        if (entry.isIntersecting) {
+          setTimeout(function () {
+            el.classList.remove('sc-hidden', dirClass);
+          }, el._animDelay || 0);
+        } else {
+          el.classList.add('sc-hidden', dirClass);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    animEls.forEach(function (el) { scrollObserver.observe(el); });
 
     /* ── Active nav section (IntersectionObserver) ── */
     var navLinks = document.querySelectorAll('.nav-menu a');
