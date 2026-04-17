@@ -34,6 +34,7 @@
       background: var(--white);
       color: var(--text);
       overflow-x: hidden;
+      padding-top: 74px; /* navbar height */
     }
 
     a    { text-decoration: none; color: inherit; }
@@ -67,8 +68,10 @@
     ============================================================ */
     .navbar {
       background: var(--yellow);
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 300;
     }
 
@@ -213,9 +216,8 @@
 
     .sobre-inner {
       display: flex;
-      align-items: flex-start;
-      gap: 60px;
-      padding: 0 130px;
+      align-items: center;
+      padding: 0 220px;
     }
 
     .sobre-text-col { flex: 0 0 46%; }
@@ -269,9 +271,10 @@
     .story-inner {
       max-width: 1440px;
       margin: 0 auto;
-      padding: 0 130px;
+      padding: 0 200px;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 80px;
     }
 
@@ -778,7 +781,7 @@
 ================================================================ -->
 <section id="projetos" aria-labelledby="projetos-h2">
   <div class="page-wrap">
-    <h2 id="projetos-h2" data-anim="fade-up">Projetos feitos aqui</h2>
+    <h2 id="projetos-h2" data-anim="fade-up">Alguns projetos feitos aqui</h2>
 
     <div class="projetos-grid">
       <div class="proj-item" data-anim="fade-up" data-delay="0">
